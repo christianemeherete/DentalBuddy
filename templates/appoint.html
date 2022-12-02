@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+        <style>
+            .content {
+                min-width: 290px;
+                padding-top: 130px;
+                width:100%;
+                text-align: center;
+            }
+        </style>
+    </head> 
+    <body>  
+
+        <form action="{{ url_for("appoint")}}" method="post">
+                <br>
+                <label for="pid">Patient ID:</label> 
+                <input type="text" id="pid" name="pd"> 
+                \
+                <br>
+                <br>
+                <label for="eid">Employee ID:</label>
+                <input type="text" id="eid" name="ed">
+
+                <br>
+                <br>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="da" placeholder="YYYY/MM/DD">
+
+                <br>
+                <br>
+                <label for="starttime">Start time:</label>
+                <input type="text" id="starttime" name="start">
+
+                <br>
+                <br>
+                <label for="endtime">End time:</label>
+                <input type="text" id="endtime" name="end">
+
+                <br>
+                <br>
+                <label for="appointtype">Appointment type:</label>
+                <input type="text" id="appointtype" name="type">
+
+                <br>
+                <br>
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="stat">
+
+                <br>
+                <br>
+                <label for="room">Room Number:</label>
+                <input type="text" id="room" name="ro">
+   
+
+                <br>
+                <br>
+                <br>
+                <button type="submit" name="app" value="app">Create an appointment</button>
+                
+            </form>
+            
+        </div>
+
+    </body>
+</html>

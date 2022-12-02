@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+        <style>
+            .content {
+                min-width: 290px;
+                padding-top: 130px;
+                width:100%;
+                text-align: center;
+            }
+        </style>
+    </head>	
+    <body>	
+
+ 		<form action="{{ url_for("reception")}}" method="post">
+                <br>
+                <h3>Please select what you would like to do.</h3>
+                <br>
+                <br>
+                <h3>Edit profile information: </h3>
+                <label for="pid">Patient ID:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="streetname">Street Name:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="streetnum">Street Number:</label>
+                <input type="text">               
+
+                <br>
+                <br>
+                <label for="apartnum">Apartment Number:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="city">City:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="province">Province(ex: ON):</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="postalcode">Postal Code:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="modinsurance">Insurance:</label>
+                <input type="text" id="modinsurance" name="modIns">
+
+                <br>
+                <br>
+                <button type="submit" name="editP" value="editP">Edit patient information</button>
+
+                <br>
+                <br>
+                <label for="eid">Employee ID:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="role">Role:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="branch_ID">Branch:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="emptype">Employee Type:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="salary">Salary:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="streetname">Street Name:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="streetnum">Street Number:</label>
+                <input type="text">               
+
+                <br>
+                <br>
+                <label for="apartnum">Apartment Number:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="city">City:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="province">Province (ex: ON):</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <label for="postalcode">Postal Code:</label>
+                <input type="text">
+
+                <br>
+                <br>
+                <button type="submit" name="editE" value="editE">Edit employee information</button>
+                <br>
+                <br>
+                <h3>Create an appointment: </h3>
+                <button type="submit" name="appoint" value="appoint">Create an appointment</button>
+
+                <!-- for employee registration -->
+                <!--insurance, date_of_birth, age, role, first_name, middle_initial, last_name, street_number, street_name, apt_number, city, province, postal_code, SSN, email, gender-->
+
+                <br>
+                <br>
+                <h3>Registration for new patient: </h3>
+                <br>
+                <label for="firstname">First Name:</label> 
+                <input type="text" id="firstname" name="fname"> 
+                \
+                <br>
+                <br>
+                <label for="middlename">Middle Initial:</label>
+                <input type="text" id="middlename" name="mname">
+
+                <br>
+                <br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lname">
+
+                <br>
+                <br>
+                <label for="role">Role (pat for patient):</label>
+                <input type="text" id="role" name="rle">
+
+                <br>
+                <br>
+                <label for="gender">Gender (female or male):</label>
+                <input type="text" id="gender" name="gen">
+
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="em">
+
+                <br>
+                <br>
+                <label for="SSN">Social Security Number:</label>
+                <input type="text" id="SSN" name="ssn">
+
+                <br>
+                <br>
+                <label for="streetname">Street Name:</label>
+                <input type="text" id="streetname" name="sname">
+
+                <br>
+                <br>
+                <label for="streetnum">Street Number:</label>
+                <input type="text" id="streetnum" name="snum">               
+
+                <br>
+                <br>
+                <label for="apartnum">Apartment Number:</label>
+                <input type="text" id="apartnum" name="anum">
+
+                <br>
+                <br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="cit">
+
+                <br>
+                <br>
+                <label for="province">Province(ex: ON):</label>
+                <input type="text" id="province" name="prov">
+
+                <br>
+                <br>
+                <label for="postalcode">Postal Code:</label>
+                <input type="text" id="postalcode" name="pcode">
+
+                <br>
+                <br>
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="text" id="date_of_birth" name="dob" placeholder="YYYY/MM/DD">
+
+                <br>
+                <br>
+                <label for="page">Age:</label>
+                <input type="text" id="page" name="patage">
+
+                <br>
+                <br>
+                <label for="insurance">Insurance:</label>
+                <input type="text" id="insurance" name="insur">
+
+                <br>
+                <br>
+                 <button type="submit" name="preg" value="preg">Register a new patient</button>
+                <br>
+                <br>
+
+                <!--for employee registration
+                # emp_type, salary, branch_ID, role, first_name, middle_initial, last_name, street_number, street_name, apt_number, city, province, postal_code, SSN, email, gender-->
+
+                <br>
+                <br>
+                <h3>Registration for new employee: </h3>
+                <br>
+                <label for="firstname">First Name:</label> 
+                <input type="text" id="firstname" name="efname"> 
+                \
+                <br>
+                <br>
+                <label for="middlename">Middle Initial:</label>
+                <input type="text" id="middlename" name="emname">
+
+                <br>
+                <br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="elname">
+
+                <br>
+                <br>
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="erle">
+
+                <br>
+                <br>
+                <label for="gender">Gender (female or male):</label>
+                <input type="text" id="gender" name="egen">
+
+                <br>
+                <br>
+                <label for="branch_ID">Branch:</label>
+                <input type="text" id="branch_ID" name="ebranch">
+
+                <br>
+                <br>
+                <label for="emptype">Employee Type:</label>
+                <input type="text" id="emptype" name="etype">
+
+                <br>
+                <br>
+                <label for="salary">Salary:</label>
+                <input type="text" id="salary" name="esalary">
+
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="eem">
+
+                <br>
+                <br>
+                <label for="SSN">Social Security Number:</label>
+                <input type="text" id="SSN" name="essn">
+
+                <br>
+                <br>
+                <label for="streetname">Street Name:</label>
+                <input type="text" id="streetname" name="esname">
+
+                <br>
+                <br>
+                <label for="streetnum">Street Number:</label>
+                <input type="text" id="streetnum" name="esnum">               
+
+                <br>
+                <br>
+                <label for="apartnum">Apartment Number:</label>
+                <input type="text" id="apartnum" name="eanum">
+
+                <br>
+                <br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="ecit">
+
+                <br>
+                <br>
+                <label for="province">Province (ex: ON):</label>
+                <input type="text" id="province" name="eprov">
+
+                <br>
+                <br>
+                <label for="postalcode">Postal Code:</label>
+                <input type="text" id="postalcode" name="epcode">
+
+                <br>
+                <br>
+                 <button type="submit" name="ereg" value="ereg">Register a new employee</button>
+                <br>
+                <br>
+
+            </form>
+ 			
+ 		</div>
+
+ 	</body>
+</html>

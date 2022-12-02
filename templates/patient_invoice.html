@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+        <style>
+            .content {
+                min-width: 290px;
+	            padding-top: 130px;
+                width:100%;
+                text-align: center;
+            }
+
+            table, th, td {
+                border: 1px solid;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+
+            }                  
+        </style>
+
+    </head>
+    <body>
+        <div class="content">
+            <h1>Welcome to Your Invoice Record</h1>
+
+            <table>
+                <tr>
+                  <th>First Name:</th>
+                  <td>{{table2[0]}}</td>
+                </tr>
+                <tr>
+                    <th>Middle Name:</th>
+                    <td>{{table2[1]}}</td>
+                  </tr>
+                <tr>
+                  <th>Last Name:</th>
+                  <td>{{table2[2]}}</td>
+                </tr>
+                <tr>
+                    <th>Street Number:</th>
+                    <td>{{table2[3]}}</td>
+                </tr>
+                <tr>
+                    <th>Street Name:</th>
+                    <td>{{table2[4]}}</td>
+                </tr>
+                <tr>
+                    <th>Apartment:</th>
+                    <td>{{table2[5]}}</td>
+                </tr>
+                <tr>
+                    <th>City:</th>
+                    <td>{{table2[6]}}</td>
+                </tr>
+                <tr>
+                    <th>Province:</th>
+                    <td>{{table2[7]}}</td>
+                </tr>
+                <tr>
+                    <th>Postal Code:</th>
+                    <td>{{table2[8]}}</td>
+                </tr><tr>
+                    <th>Email:</th>
+                    <td>{{table2[9]}}</td>
+                </tr>
+                <tr>
+                    <th>Insurance:</th>
+                    <td>{{table2[10]}}</td>
+                </tr>
+                <tr>
+                    <th>Phone Number(s):</th>
+                    <td>{{table2[11]}}</td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <table>
+                <tr>
+                    <th>Date of Issue</th>
+                    <th>Patient Charge</th>
+                    <th>Insurance Charge</th>
+                    <th>Total Fee Charge</th>
+                    <th>Discount</th>
+                    <th>Penalty</th>
+                </tr>
+
+                {% for row in table %}
+                    <tr>
+                        <td>{{row[0]}}</td> 
+                        <td>{{row[1]}}</td> 
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </body>
+</html>

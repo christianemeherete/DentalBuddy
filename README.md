@@ -1,15 +1,4 @@
 # **Dental Registration System**
-## Course code:
-CSI 2132
-
-## Group 20
-|Member |Student Number|
-|---|---|
-|Alexander Yu|300120635|
-|Alexis Verana|300116080|
-|Christiane Meherete|300116269|
-|Coralie Ostertag|300174530|
-|Vanisha Bagga|300191679|
 
 ## Setup:
 ### Requirements
